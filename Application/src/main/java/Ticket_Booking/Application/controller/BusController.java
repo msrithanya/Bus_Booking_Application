@@ -19,5 +19,9 @@ public class BusController {
     public List<Bus> deletebus(@PathVariable long id){
         return busservice.deleteB(id);
     }
+    @GetMapping("/getallbus")
+    public List<Bus> getallbus(){
+        return busservice.getAllBus();
+    }
 
 }

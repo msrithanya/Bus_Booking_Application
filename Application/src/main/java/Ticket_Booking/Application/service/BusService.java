@@ -19,4 +19,8 @@ public class BusService {
         busrepository.deleteById(id);
         return busrepository.findAll();
     }
+
+    public List<Bus> getAllBus() {
+        return busrepository.findAll();
+    }
 }
