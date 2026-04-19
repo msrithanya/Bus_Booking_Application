@@ -14,12 +14,16 @@ public class BusController {
     BusService busservice;
     @PostMapping("/createBus")
     public Bus createbus(@RequestBody Bus b){
-        log.error("Admin created Bus!!!!!!!!");
+        log.info("Admin created Bus!!!!!!!!");
         return busservice.createB(b);
     }
     @DeleteMapping("/busdelete/{id}")
     public List<Bus> deletebus(@PathVariable long id){
         return busservice.deleteB(id);
+    }
+    @DeleteMapping("/deleteAllBus")
+    public String deleteAllBus(){
+        return busservice.deleteallbus();
     }
     @GetMapping("/getallbus")
     public List<Bus> getallbus(){

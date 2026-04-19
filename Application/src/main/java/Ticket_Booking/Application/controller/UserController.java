@@ -1,6 +1,8 @@
 package Ticket_Booking.Application.controller;
 
 import Ticket_Booking.Application.dto.Loginuser;
+import Ticket_Booking.Application.dto.TicketBooking;
+import Ticket_Booking.Application.entity.Bus;
 import Ticket_Booking.Application.entity.Users;
 import Ticket_Booking.Application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,10 @@ public class UserController {
     public String deleteuser(@PathVariable long id){
         userservice.deleteu(id);
         return "deleted";
+    }
+    @PostMapping("/ticketbooking")
+    public Bus bookTicket(@RequestBody TicketBooking tb){
+      return userservice.bookTickets(tb);
     }
     @GetMapping
     public List<Users> getAllUsers(){

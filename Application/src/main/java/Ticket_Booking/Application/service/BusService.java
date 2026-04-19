@@ -23,4 +23,9 @@ public class BusService {
     public List<Bus> getAllBus() {
         return busrepository.findAll();
     }
+
+    public String deleteallbus() {
+        busrepository.deleteAll();
+        return "deleted all bus";
+    }
 }

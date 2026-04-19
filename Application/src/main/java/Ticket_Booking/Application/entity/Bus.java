@@ -13,12 +13,13 @@ public class Bus {
     @Id
     @GeneratedValue
     long id;
-    @NotBlank
+//    @NotBlank
     String busname;
     String busnumber;
     String available;
     String Onboarding;
     String destinatoion;
+    int seats;
 
     public long getId() {
         return id;
@@ -66,5 +67,13 @@ public class Bus {
 
     public void setDestinatoion(String destinatoion) {
         this.destinatoion = destinatoion;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
     }
 }
